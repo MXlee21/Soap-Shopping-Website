@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="ContactUs.css">
+</head>
+<body>
+    <main>
+		<header>
+			<nav>
+				<ul>
+					<li><a href="/WebAss/Homepage/">Home</a></li>
+					<li><a href="/WebAss/itemListNDescript/">Products</a></li>
+					<li><a href="/WebAss/contactUs/">Contact</a></li>
+				</ul>
+			</nav>
+		
+		</header>
+        <h1 id="title">Contact Us</h1>
+        <div class="contact-box">
+            <div class="contact-left">
+                <h3>Your Feedback</h3>
+                <form id="contactForm">
+                    <div class="input-row">
+                        <label for="salutation">Salutation:</label>
+                        <select id="salutation" name="salutation" required>
+                            <option value="Mr">Mr</option>
+                            <option value="Ms">Ms</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Mdm">Mdm</option>
+                        </select>
+                        <div>
+                            <label>Name:</label>
+                            <input type="text" id="nameInput" required>
+                        </div>
+                        <div>
+                            <label>Email:</label>
+                            <input type="email" id="emailInput" required>
+                        </div>
+                        <div>
+                            <label>Phone Number:</label>
+                            <input type="number" id="phoneInput" required>
+                        </div>
+                        <div>
+                            <label>Feedback:</label> <!-- Added -->
+                            <textarea id="feedbackInput" rows="5" required></textarea> <!-- Added -->
+                        </div> <!-- Added -->
+                    </div>
+                    <button type="submit">Submit</button> <!-- Moved inside form -->
+                </form>
+            </div>
+            <div class="contact-right">
+                <h3>Connect With Us</h3>
+                <h2>Social Media Platform</h2>
+                <a href="https://www.facebook.com/login/"><img src="contact images/facebook.png" alt="facebook"></a>
+                <a href="https://twitter.com/i/flow/login"><img src="contact images/twitter.png" alt="twitter"></a>
+                <a href="https://www.instagram.com/accounts/login/?hl=en"><img src="contact images/instagram.png" alt="instagram"></a>
+                <table>
+                    <tr>
+                        <td>Email</td>
+                        <td>Phone Number</td>
+                    </tr>
+                    <tr>
+                        <td><a href="mailto:handmadesoapMalaysia@gmail.com">Handmade Soap Malaysia</a></td>
+                        <td>012-3456789</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script>
+            document.getElementById("contactForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                var name = document.getElementById("nameInput").value;
+                var email = document.getElementById("emailInput").value;
+                var phone = document.getElementById("phoneInput").value;
+                var feedback = document.getElementById("feedbackInput").value;
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (name.trim() === "" || email.trim() === "" || feedback.trim() === "" || phone.trim() === "") {
+                    alert("Please fill in all fields before submitting.");
+                } else if (!emailRegex.test(email)) {
+                    alert("Please enter a valid email address.");
+                } else {
+                    // Form submission
+                    alert("Thanks for submitting! Your message will be replied to as soon as possible.");
+                    this.submit();
+                }
+            });
+        </script>
+    </main>
+    <footer>
+        <p>&copy; 2024 Handmade Soap Malaysia. All rights reserved.</p>
+    </footer>
+</body>
+</html>

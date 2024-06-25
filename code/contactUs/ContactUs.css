@@ -1,0 +1,143 @@
+/* ContactUs.css */
+
+header {
+    background-color: #436850;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav{
+  text-align: center; /* Center aligns navigation items */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+	transition: color 0.3s; 
+}
+
+nav ul li a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+
+#title {
+    padding-top: 30px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3em;
+    background-color: #333;
+    color: #fff;
+    margin-bottom:0px; 
+}
+
+.contact-box {
+    display: flex;
+}
+
+.contact-left {
+    flex-basis: 75%;
+    padding: 60px 60px;
+    background-color: #436850;
+    color: #d8cfd0;
+}
+
+.contact-left h3 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.contact-right {
+    flex-basis: 25%;
+    padding: 60px 60px;
+    background-color: #05784a;
+    color:#d8cfd0 ;
+}
+
+.contact-right h3 {
+    font-size: 2.5em;
+    font-weight: bold;
+    white-space: nowrap; /* Ensures "Connect With Us" title stays in one line */
+}
+
+.contact-right a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.contact-right img {
+    width: 3em;
+}
+
+.input-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-row label {
+    margin-bottom: 5px; 
+}
+
+#salutation {
+    width: 35%; 
+    margin-bottom: 15px;
+}
+
+#nameInput {
+    margin-bottom: 20px; 
+}
+
+#emailInput {
+    width: 50%;
+    margin-bottom: 20px; 
+}
+
+#phoneInput {
+    width: 40%; 
+    margin-bottom: 10px;
+}
+
+form textarea {
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Increase spacing between "Email" and "Feedback" */
+}
+
+button {
+    background: #007160;
+    width: 100px;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 1px 2px 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+}
+
+td {
+    color:#85c9e8;
+    padding-right: 20px;
+    padding-top: 20px;
+    white-space: nowrap; 
+}
+
+td a {
+    color:#0390d9;
+}
